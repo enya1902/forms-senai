@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #003366; /* Azul escuro do SENAI */
+    color: #fff;
+    text-align: center;
+    overflow: hidden; /* Evita barras de rolagem indesejadas */
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); /* Efeito de vidro embaçado */
+    border-radius: 15px;
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 250px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #f0f0f0;
+    margin-bottom: 25px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #ff6600; /* Laranja do SENAI */
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input[type="password"]::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+input[type="password"]:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.5);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #ff6600; /* Laranja do SENAI */
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e65c00;
+}
+
+.error {
+    color: #ffcccc;
+    font-size: 14px;
+    margin-top: 15px;
+    display: none;
+}

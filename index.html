@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso SENAI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="senai logo.png" alt="Logo SENAI" class="logo">
+            <h2>Bem-vindo(a)!</h2>
+            <p>Insira a senha para acessar o formulário.</p>
+            <div class="input-container">
+                <input type="password" id="password" placeholder="Digite a senha..." required>
+                <button id="submit-btn">Acessar</button>
+            </div>
+            <p id="error-message" class="error"></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('submit-btn').addEventListener('click', function() {
+            const password = document.getElementById('password').value;
+            const correctPassword = 'sala5'; // TROQUE ESTA SENHA
+            const formUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfqN3NDBfwCrS1-LPXXSwL6XYVRJcPynffde6OK6Hw2j-GBGw/viewform?usp=header';
+
+            const errorMessage = document.getElementById('error-message');
+
+            if (password === correctPassword) {
+                window.location.href = formUrl;
+            } else {
+                errorMessage.textContent = 'Senha incorreta. Tente novamente.';
+                errorMessage.style.display = 'block';
+            }
+        });
+
+        document.getElementById('password').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('submit-btn').click();
+            }
+        });
+    </script>
+</body>
+</html>
